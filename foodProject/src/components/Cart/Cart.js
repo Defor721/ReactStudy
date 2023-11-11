@@ -1,5 +1,5 @@
 import classes from "./Cart.module.css";
-
+import Modal from "../UI/Modal";
 export default function Cart(props) {
   const dummysushi = [{ id: "c1", name: "sushi", amount: 2, price: 12.99 }];
   const cartitems = (
@@ -11,7 +11,7 @@ export default function Cart(props) {
   );
 
   return (
-    <div>
+    <Modal>
       {cartitems}
       <div className={classes.total}>
         <span>Total Amount</span>
@@ -21,6 +21,6 @@ export default function Cart(props) {
         <button className={classes["button--alt"]}>Close</button>
         <button className={classes.button}>Order</button>
       </div>
-    </div>
+    </Modal>
   );
 }
